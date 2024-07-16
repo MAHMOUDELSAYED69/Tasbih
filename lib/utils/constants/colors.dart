@@ -7,4 +7,5 @@ abstract class ColorManager {
   static const Color black = Color(0xff000000);
   static const Color white = Color(0xffffffff);
   static const Color grey = Color(0xff444444);
+  static const Color error = Color(0xffF85555);
 }
