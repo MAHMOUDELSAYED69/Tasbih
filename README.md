@@ -4,7 +4,7 @@ Tasbih Counter is a simple Flutter app that allows users to count their tasbih (
 A new Flutter project.
 
 ## Features
-- **`Counter Functionality`**: Increment and decrement the counter with ease.
+- **`Counter Functionality`**: Easily increment the counter.
 - **`Reset Counter`**: Reset the counter to start a new counting session.
 - **`Persistent Data`**: The counter state is saved even if the app is closed, allowing users to continue their count later.
 
@@ -93,3 +93,11 @@ Submit a pull request.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+
+## Contact
+If you have any questions or suggestions, feel free to reach out:
+
+Email: [gcfjxvkj@gmail.com]         
+GitHub: [MAHMOUDELSAYED69]
