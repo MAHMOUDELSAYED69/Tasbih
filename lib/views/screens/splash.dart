@@ -1,29 +1,48 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/images.dart';
+import '../../utils/constants/routes.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _goToNextScreen();
+  }
+
+  Future<void> _goToNextScreen() async => Future.delayed(
+        const Duration(seconds: 2),
+        () => Navigator.pushReplacementNamed(context, RouteManager.home),
+      );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            transform: GradientRotation(50),
-            colors: [
-              ColorManager.darkGreen,
-              ColorManager.darkGreen,
-              ColorManager.black,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            tileMode: TileMode.mirror,
-          ),
+        alignment: Alignment.center,
+        decoration:
+            const BoxDecoration(gradient: GradientManager.scaffoldBackground),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Positioned(
+              bottom: 50.h,
+              child: Image.asset(
+                ImageManager.logo,
+                width: 170.w,
+                height: 170.w,
+              ),
+            ),
+          ],
         ),
-        child: Center(child: Image.asset(ImageManager.logo)),
       ),
     );
   }
