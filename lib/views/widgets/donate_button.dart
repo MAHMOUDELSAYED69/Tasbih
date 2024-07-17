@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:tasbih/utils/constants/colors.dart';
 import 'package:tasbih/utils/extentions/extentions.dart';
 
+import '../../utils/helpers/uri_luncher.dart';
+
 class Donate extends StatelessWidget {
   const Donate({
     super.key,
@@ -18,11 +20,11 @@ class Donate extends StatelessWidget {
               ?.copyWith(color: ColorManager.lightGrey),
         ),
         GestureDetector(
+          onTap: UrlManager.launchURL,
           child: Text(
             'Donate',
             style: context.textTheme.displayMedium,
           ),
-          onTap: () {},
         ),
       ],
     );
