@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tasbih/controllers/counter/counter_cubit.dart';
 import 'package:tasbih/utils/constants/colors.dart';
 import 'package:tasbih/utils/extentions/extentions.dart';
 
@@ -32,6 +33,7 @@ class _CounterButtonState extends State<CounterButton> {
           isTapped = false;
         });
       },
+      onTap:context.cubit<CounterCubit>().increment,
       splashColor: ColorManager.transparent,
       overlayColor: const WidgetStatePropertyAll(ColorManager.transparent),
       child: AnimatedContainer(

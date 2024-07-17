@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tasbih/controllers/counter/counter_cubit.dart';
 
 import 'package:tasbih/utils/extentions/extentions.dart';
 import 'package:tasbih/views/widgets/counter_button.dart';
@@ -11,6 +13,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = context.cubit<CounterCubit>();
     return Scaffold(
       appBar: AppBar(),
       body: Container(
@@ -18,16 +21,19 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             const Spacer(flex: 3),
-            ResetButton(),
+            const ResetButton(),
             const Spacer(flex: 3),
-            Text(
-              '0',
-              style: context.textTheme.bodyLarge,
+            BlocBuilder<CounterCubit, int>(
+              builder: (context, state) {
+                return Text(cubit.counter.toString(),
+                    textAlign: TextAlign.center,
+                    style: context.textTheme.bodyLarge);
+              },
             ),
-            const Spacer(),
+            const Spacer(flex: 2),
             const CounterButton(),
             const Spacer(flex: 2),
-            Donate(),
+            const Donate(),
             const Spacer(),
           ],
         ),
