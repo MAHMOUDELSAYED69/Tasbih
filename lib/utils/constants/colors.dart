@@ -14,15 +14,13 @@ abstract class ColorManager {
 
 abstract class GradientManager {
   const GradientManager._();
-  static const Gradient scaffoldBackground = LinearGradient(
+  static const Gradient scaffoldBackground = SweepGradient(
+    tileMode: TileMode.decal,
     transform: GradientRotation(50),
     colors: [
       ColorManager.black,
       ColorManager.darkGreen,
+      ColorManager.black,
     ],
-    begin: Alignment.topLeft,
-    end: Alignment.bottomRight,
-    tileMode: TileMode.mirror,
   );
-  
 }

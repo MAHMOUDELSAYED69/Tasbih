@@ -33,7 +33,7 @@ class _CounterButtonState extends State<CounterButton> {
           isTapped = false;
         });
       },
-      onTap:context.cubit<CounterCubit>().increment,
+      onTap: context.cubit<CounterCubit>().increment,
       splashColor: ColorManager.transparent,
       overlayColor: const WidgetStatePropertyAll(ColorManager.transparent),
       child: AnimatedContainer(
@@ -52,10 +52,13 @@ class _CounterButtonState extends State<CounterButton> {
           ),
         ),
         child: Center(
-          child: Icon(
-            Icons.keyboard_arrow_up_outlined,
-            color: ColorManager.lightGreen,
-            size: 100.sp,
+          child: RotatedBox(
+            quarterTurns: 1,
+            child: Icon(
+              Icons.arrow_back_ios_new_rounded,
+              color: ColorManager.lightGreen,
+              size: 60.sp,
+            ),
           ),
         ),
       ),

@@ -30,18 +30,10 @@ class _SplashScreenState extends State<SplashScreen> {
         alignment: Alignment.center,
         decoration:
             const BoxDecoration(gradient: GradientManager.scaffoldBackground),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Positioned(
-              bottom: 50.h,
-              child: Image.asset(
-                ImageManager.logo,
-                width: 170.w,
-                height: 170.w,
-              ),
-            ),
-          ],
+        child: Image.asset(
+          ImageManager.logo,
+          width: 170.w,
+          height: 170.w,
         ),
       ),
     );
