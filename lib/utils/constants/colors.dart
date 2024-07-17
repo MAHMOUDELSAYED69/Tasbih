@@ -6,6 +6,23 @@ abstract class ColorManager {
   static const Color lightGreen = Color(0xff00EA86);
   static const Color black = Color(0xff000000);
   static const Color white = Color(0xffffffff);
-  static const Color grey = Color(0xff444444);
+  static const Color lightGrey = Color(0xff666666);
+  static const Color darkGrey = Color(0xff222222);
   static const Color error = Color(0xffF85555);
+  static const Color transparent = Colors.transparent;
+}
+
+abstract class GradientManager {
+  const GradientManager._();
+  static const Gradient scaffoldBackground = LinearGradient(
+    transform: GradientRotation(50),
+    colors: [
+      ColorManager.black,
+      ColorManager.darkGreen,
+    ],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    tileMode: TileMode.mirror,
+  );
+  
 }

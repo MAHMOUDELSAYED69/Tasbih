@@ -31,7 +31,7 @@ abstract class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(3.dm),
         ),
-        side: BorderSide(color: ColorManager.grey, width: 1.dm),
+        side: BorderSide(color: ColorManager.darkGrey, width: 1.dm),
       ),
       //
 
@@ -56,7 +56,7 @@ abstract class AppTheme {
           fontSize: 20.spMin,
           fontWeight: FontWeight.w500,
         ),
-        backgroundColor: ColorManager.darkGreen,
+        backgroundColor: ColorManager.transparent,
         scrolledUnderElevation: 0,
         titleSpacing: 0,
         iconTheme: const IconThemeData(color: ColorManager.black),
@@ -67,18 +67,18 @@ abstract class AppTheme {
       //-----------------------------------------------------------//* TEXT
       textTheme: TextTheme(
         bodyLarge: TextStyle(
-          fontSize: 24.spMin,
-          color: ColorManager.black,
+          fontSize: 70.sp,
+          color: ColorManager.white,
           fontWeight: FontWeight.w600,
         ),
         bodyMedium: TextStyle(
           fontSize: 16.spMin,
-          color: ColorManager.black,
+          color: ColorManager.darkGrey,
           fontWeight: FontWeight.w500,
         ),
         bodySmall: TextStyle(
           fontSize: 14.spMin,
-          color: ColorManager.grey,
+          color: ColorManager.white,
           fontWeight: FontWeight.w400,
         ),
 
@@ -90,7 +90,7 @@ abstract class AppTheme {
         //--------------------------------------------------//* For button
         displayMedium: TextStyle(
           fontSize: 16.spMin,
-          color: ColorManager.white,
+          color: ColorManager.lightGreen,
           fontWeight: FontWeight.w600,
         ),
         displaySmall: TextStyle(
@@ -121,7 +121,7 @@ abstract class AppTheme {
           ),
           borderSide: BorderSide(
             width: 1.7.w,
-            color: ColorManager.grey,
+            color: ColorManager.darkGrey,
           ),
         ),
         errorBorder: OutlineInputBorder(

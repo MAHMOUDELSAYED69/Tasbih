@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/constants/routes.dart';
+import '../views/screens/home.dart';
 import '../views/screens/splash.dart';
 
 abstract class AppRouter {
@@ -9,6 +10,8 @@ abstract class AppRouter {
     switch (settings.name) {
       case RouteManager.initialRoute:
         return _materialPageRoute(const SplashScreen());
+      case RouteManager.home:
+        return _materialPageRoute(const HomeScreen());
 
       default:
         return null;
