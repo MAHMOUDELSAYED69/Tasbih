@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'app.dart';
-import 'utils/cache/cache.dart';
+import 'cache/cache.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:tasbih/utils/cache/cache.dart';
+import 'package:tasbih/cache/cache.dart';
 
 class CounterCubit extends Cubit<int> {
   CounterCubit() : super(CacheData.getInt(key: 'counter') ?? 0);
